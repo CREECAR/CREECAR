@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ค้นหาใน Google</title>
+</head>
+<body>
+    <h1>ค้นหาใน Google</h1>
+    <input type="text" id="searchQuery" placeholder="กรุงเทพซีรี่คาร์">
+    <button onclick="searchGoogle()">ค้นหา</button>
+
+    <h2>ลิงก์ที่เกี่ยวข้อง</h2>
+    <ul>
+        <li><a href="https://creecar.github.io/CREECAR" target="_blank">เว็บไซต์ตัวอย่าง</a></li>
+        <li><a href="https://creecar.github.io/CREECAR" target="_blank">อีกหนึ่งเว็บไซต์</a></li>
+    </ul>
+
+    <script>
+        function searchGoogle() {
+            let query = document.getElementById("searchQuery").value;
+            if (query) {
+                window.open("https://www.google.com/search?q=" + encodeURIComponent(query), "_blank");
+            }
+        }
+    </script>
+</body>
+</html>
